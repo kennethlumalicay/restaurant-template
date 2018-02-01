@@ -8,7 +8,7 @@ import Footer from './Footer.js';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename='/company-template/'>
         <div className='App'>
             <Nav />
             <Routes />
