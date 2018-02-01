@@ -9,20 +9,37 @@ class Nav extends Component {
     this.active = 'active-nav';
     this.state = {
       hideNav: true,
-      navBg: false
+      navBg: false,
+      home: true
     }
   }
   componentDidMount() {
     document.addEventListener('scroll', (e) => this.handleScroll(e));
+    this.pageChange(this.props);
+  }
+  componentWillReceiveProps(next) {
+    this.pageChange(next);
+  }
+  pageChange(props) {
+    if(!props.match.params.page) {
+      this.setState({
+        home: true
+      });
+    } else {
+      this.setState({
+        home: false
+      });
+    }
   }
   handleScroll(e) {
-    const { navBg } = this.state;
+    const { navBg, home } = this.state;
     const { scrollY, innerHeight } = window;
-    if(navBg && scrollY < innerHeight) {
+    const height = home ? innerHeight : innerHeight * 7/10;
+    if(navBg && scrollY < height) {
       this.setState({
         navBg: false
       });
-    } else if(!navBg && scrollY >= innerHeight) {
+    } else if(!navBg && scrollY >= height) {
       this.setState({
         navBg: true
       });
@@ -61,8 +78,8 @@ class Nav extends Component {
         <nav className={navLinksClass}>
           <NavLink exact to='/' activeClassName={this.active}>Home</NavLink>
           <NavLink to='/about' activeClassName={this.active}>About</NavLink>
-          <NavLink to='/service' activeClassName={this.active}>Service</NavLink>
-          <NavLink to='/contact' activeClassName={this.active}>Contact</NavLink>
+          <NavLink to='/services' activeClassName={this.active}>Service</NavLink>
+          <NavLink to='/contacts' activeClassName={this.active}>Contact</NavLink>
         </nav>
       </div>
     );

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import './css/App.css';
-import Nav from './Nav.js';
 import Routes from './Routes.js';
 import Footer from './Footer.js';
 
@@ -10,7 +9,6 @@ class App extends Component {
     return (
       <BrowserRouter basename='/company-template/'>
         <div className='App'>
-            <Nav />
             <Routes />
             <Footer />
         </div>

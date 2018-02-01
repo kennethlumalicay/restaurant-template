@@ -8,7 +8,10 @@ const SingleCard = props => (
     </div>
     <h3>{props.name}</h3>
     <p>{props.description}</p>
-    <Link to={props.link}>Learn more</Link>
+    { props.link
+      ? <Link to={props.link}>Learn more</Link>
+      : null
+    }
   </div>
 );
 

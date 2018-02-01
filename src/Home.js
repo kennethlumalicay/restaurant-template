@@ -14,7 +14,7 @@ class Home extends Component {
         clearInterval(animate);
         return;
       }
-      window.scroll(0,window.scrollY+window.innerHeight/128);
+      window.scroll(0,window.scrollY+(window.innerHeight+64-window.scrollY)/64);
     });
   }
   render() {
@@ -23,7 +23,7 @@ class Home extends Component {
         <header className='landing'>
           <h1>We Capture Memories.</h1>
           <h4>This is a template. None of this is real.</h4>
-          <Link to='/service'>View Services</Link>
+          <Link to='/services'>View Services</Link>
           <img src={scroll} alt='scroll' onClick={(e) => this.handleScroll(e)}/>
         </header>
         <article className='home-services'>
