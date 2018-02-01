@@ -1,0 +1,79 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  height: 3rem;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.25s ease-in-out;
+}
+.nav-bg {
+  background-color: rgba(255,255,255,0.8);
+}
+.nav a, .nav a:visited {
+  color: #333;
+  text-decoration: none;
+}
+.company {
+  display: block;
+}
+.company a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.logo {
+  width: 3rem;
+  max-height: 100%;
+  margin-right: 1rem;
+}
+.navbtn {
+  cursor: pointer;
+  outline: none;
+  padding: 1rem 2rem;
+}
+.hide-nav {
+  display: none !important;
+}
+.navlinks {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 5rem;
+  right: 0;
+  font-weight: bold;
+}
+.navlinks a, .navlinks a:visited {
+  padding: 1rem 2rem;
+}
+.navlinks a:hover {
+  box-shadow: 0 2px;
+}
+.active-nav:visited {
+  color: steelblue !important;
+}
+
+@media screen and (min-width: 768px) {
+  .company a {
+    font-size: 2rem;
+  }
+  .hide-nav {
+    display: inherit !important;
+  }
+  .navbtn {
+    display: none;
+  }
+  .navlinks {
+    position: relative;
+    top: auto;
+    right: auto;
+    flex-direction: row;
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,49 @@
+.landing {
+  min-height: 100vh;
+  background-image: url('../img/landing.jpg');
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #333;
+  cursor: default;
+  text-align: center;
+}
+.landing h1 {
+  font-size: 3rem;
+  margin: auto auto 0 auto;
+  margin-top: calc(50vh - 7rem);
+}
+.landing h4 {
+  margin: 0 auto;
+}
+.landing a {
+  margin: 5rem auto auto auto;
+  text-decoration: none;
+  color: #333;
+  padding: 1rem 2rem;
+  border-radius: 1.8rem / 50%;
+  background-color: steelblue;
+  font-weight: bold;
+}
+.landing img {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin: 0 auto 4rem auto;
+  width: 1.5rem;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.landing img:hover {
+  opacity: 0.8;
+}
+.home-services {
+  text-align: center;
+  background-color: #fafafa;
+  padding: 5rem 0 6rem 0;
+}
+.home-services h2 {
+  margin: 1rem;
+}
