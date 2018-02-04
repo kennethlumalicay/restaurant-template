@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import './css/cards.css';
 
 const SingleCard = props => (
-  <div className='card'>
-    <div className='card-img' style={{backgroundImage: `url(${props.img})`}}>
+  <div className={`${props.classType}`}>
+    <div className={`${props.classType}-img`} style={{backgroundImage: `url(${props.img})`}}>
     </div>
     <h3>{props.name}</h3>
     <p>{props.description}</p>

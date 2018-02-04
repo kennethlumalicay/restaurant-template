@@ -40,19 +40,22 @@ const services = [
     name: 'Life',
     description: 'We provide service for life events such as weddings and birthdays.',
     link: '/services#life',
-    img: life
+    img: life,
+    classType: 'card'
   },
   {
     name: 'Travel',
     description: 'We will accompany you in your travel as your personal photographer.',
     link: '/services#travel',
-    img: travel
+    img: travel,
+    classType: 'card'
   },
   {
     name: 'Style',
     description: 'We do fashion, portaits and studio photoshoots.',
     link: '/services#style',
-    img: style
+    img: style,
+    classType: 'card'
   },
 ];
 
