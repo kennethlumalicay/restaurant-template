@@ -27,12 +27,16 @@ class Routes extends Component {
 class ToTop extends Component {
   componentWillReceiveProps(next) {
     if(this.props.match.params.page !== next.match.params.page) {
-      let animate = setInterval(function() {
+      var animate = setInterval(function() {
         if(window.scrollY <= 0) {
           clearInterval(animate);
           return;
         }
         window.scroll(0,window.scrollY-window.scrollY/32);
+      });
+      window.addEventListener('touchstart', function mobileTouch(e) {
+        clearInterval(animate);
+        window.removeEventListener('touchstart', mobileTouch);
       });
     }
   }

@@ -15,6 +15,10 @@ class Home extends Component {
         return;
       }
       window.scroll(0,window.scrollY+(window.innerHeight+64-window.scrollY)/32);
+      window.addEventListener('touchstart', function mobileTouch(e) {
+        clearInterval(animate);
+        window.removeEventListener('touchstart', mobileTouch);
+      });
     });
   }
   render() {
