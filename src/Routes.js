@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './css/routes.css';
 import Nav from './Nav.js';
 import Home from './Home.js';
@@ -13,10 +13,12 @@ class Routes extends Component {
       <main className='route'>
         <Route path='/:page?' component={ToTop}/>
         <Route path='/:page?' component={Nav}/>
-        <Route exact path='/' component={Home}/>
-        <Route path='/about' component={About}/>
-        <Route path='/services' component={Services}/>
-        <Route path='/contacts' component={Contacts}/>
+        <Switch>
+          <Route path='/about' component={About}/>
+          <Route path='/services' component={Services}/>
+          <Route path='/contacts' component={Contacts}/>
+          <Route path='/' component={Home}/>
+        </Switch>
       </main>
     );
   }
@@ -30,7 +32,7 @@ class ToTop extends Component {
           clearInterval(animate);
           return;
         }
-        window.scroll(0,window.scrollY-window.scrollY/64);
+        window.scroll(0,window.scrollY-window.scrollY/32);
       });
     }
   }

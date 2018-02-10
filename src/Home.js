@@ -14,7 +14,7 @@ class Home extends Component {
         clearInterval(animate);
         return;
       }
-      window.scroll(0,window.scrollY+(window.innerHeight+64-window.scrollY)/64);
+      window.scroll(0,window.scrollY+(window.innerHeight+64-window.scrollY)/32);
     });
   }
   render() {
