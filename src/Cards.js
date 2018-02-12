@@ -17,7 +17,7 @@ const SingleCard = props => (
 
 const Cards = props => (
   <div className='cards-container'>
-    {props.items.map(e => <SingleCard key={e.name} {...e} />)}
+    {props.items.map(e => <SingleCard key={e.name} {...e} classType={props.classType} />)}
   </div>
 );
 

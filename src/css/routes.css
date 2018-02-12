@@ -18,3 +18,9 @@
 .test {
   height: 100vh;
 }
+.route > *:not(nav) {
+  animation: slide-down 0.35s ease-in-out;
+}
+@keyframes slide-down {
+  from {margin-top: -7px; opacity: 0.4};
+}

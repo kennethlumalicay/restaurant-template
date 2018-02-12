@@ -63,25 +63,25 @@ class Nav extends Component {
     const navClass = 'nav' + (navBg ? ' nav-bg' : '');
 
     return (
-      <div className={navClass}>
-        <nav className='company'>
+      <nav className={navClass}>
+        <div className='company'>
           <NavLink exact to='/'>
             <img src={logo} className='logo' alt='logo'/>
             <span>Lens Vision</span>
           </NavLink>
-        </nav>
+        </div>
         <div className='navbtn'
           tabIndex='0'
           onClick={(e) => this.toggleNav(e)}
           onBlur={(e) => this.handleBlur(e)}
         >Menu</div>
-        <nav className={navLinksClass}>
+        <div className={navLinksClass}>
           <NavLink exact to='/' activeClassName={this.active}>Home</NavLink>
           <NavLink to='/about' activeClassName={this.active}>About</NavLink>
           <NavLink to='/services' activeClassName={this.active}>Service</NavLink>
           <NavLink to='/contacts' activeClassName={this.active}>Contact</NavLink>
-        </nav>
-      </div>
+        </div>
+      </nav>
     );
   }
 }
