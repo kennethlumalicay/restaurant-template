@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './css/home.css';
 import Cards from './Cards.js';
 import scroll from './img/scroll.png';
-import { items } from './Services.js';
+import services from './servicesItems.js';
 
 class Home extends Component {
   handleScroll(e) {
@@ -30,7 +30,7 @@ class Home extends Component {
         </header>
         <article className='home-services'>
           <h2>What We Offer</h2>
-          <Cards items={items} classType='card'/>
+          <Cards items={services} type='card'/>
         </article>
       </Fragment>
     );

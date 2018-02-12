@@ -4,4 +4,8 @@ body {
   padding: 0;
   font-family: 'Open Sans', sans-serif;
   cursor: default;
+  color: #333;
+}
+p {
+  max-width: 1024px;
 }

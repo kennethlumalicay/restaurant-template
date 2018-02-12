@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 2rem 0;
 }
 .card {
   display: flex;
@@ -9,9 +10,10 @@
   width: 90vw;
   border-radius: 5px;
   background-color: white;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
   margin: 1rem;
   overflow: hidden;
+  text-align: center;
 }
 .card-img {
   margin: 0;
@@ -26,17 +28,19 @@
 }
 .card p {
   color: #555;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto auto auto;
   padding: 0 1rem;
+}
+.card .price {
+  margin: 2rem auto 0 auto;
 }
 .card a {
   display: inline-block;
   text-decoration: none;
-  color: #333;
+  color: #fff;
   background-color: steelblue;
-  margin: auto auto 2rem auto;
+  margin: 2rem auto;
   padding: 0.5rem 1.5rem;
-  font-weight: bold;
   border-radius: 1.2rem / 50%;
 }
 .card a:hover {
@@ -48,5 +52,6 @@
   }
   .card {
     width: calc(28% - 2rem);
+    min-width: 288px;
   }
 }

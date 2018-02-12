@@ -28,7 +28,7 @@ class ToTop extends Component {
   componentWillReceiveProps(next) {
     if(this.props.match.params.page !== next.match.params.page) {
       var animate = setInterval(function() {
-        if(window.scrollY <= 0) {
+        if(window.scrollY < 1) {
           clearInterval(animate);
           return;
         }
