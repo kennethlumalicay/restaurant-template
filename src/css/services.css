@@ -1,5 +1,5 @@
 .services-content {
-  padding: 2rem;
+  padding: 0 2rem;
   background-color: #eee;
 }
 .content-desc {
@@ -7,9 +7,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 4rem 0;
 }
 .content-desc h1 {
-  margin: 2rem;
+  margin: auto auto 1rem auto;
 }
 .content-desc p {
   margin: 0;

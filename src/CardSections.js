@@ -6,7 +6,6 @@ const SingleSection = props => (
   <div className='card-section'>
     <h1>{props.name}</h1>
     <p>{props.description}</p>
-    <p>{props.longDescription}</p>
     <Cards items={props.plans} type='card'/>
   </div>
 );

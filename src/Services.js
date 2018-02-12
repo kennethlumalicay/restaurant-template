@@ -15,7 +15,7 @@ class Services extends Component {
         <article className='services-content'>
           <div className='content-desc'>
             <h1>Pick a plan that fit your needs.</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et lorem facilisis, bibendum sapien a, molestie orci. Sed mi nisl, commodo ac erat ut, lobortis aliquet nunc. Proin purus urna, cursus et augue iaculis, auctor molestie felis. Nunc feugiat, felis at elementum aliquet, lacus risus lobortis velit, ac eleifend diam leo sit amet lectus. Curabitur rutrum justo a eros rhoncus, id vestibulum justo sagittis. Praesent non urna et nibh commodo fringilla vel eget felis.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et lorem facilisis, bibendum sapien a, molestie orci.</p>
           </div>
           <CardSections items={services}/>
         </article>

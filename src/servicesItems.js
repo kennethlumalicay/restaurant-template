@@ -57,7 +57,6 @@ export default [
   {
     name: 'Life',
     description: 'We provide service for life events such as weddings and birthdays.',
-    longDescription: 'Sed et efficitur magna, eget dictum felis. Vestibulum in porttitor orci. Vivamus purus augue, facilisis ut placerat quis, suscipit eu odio. Vivamus laoreet ultrices nibh eget feugiat.',
     link: '/services',
     img: life,
     plans: lifePlans
@@ -65,7 +64,6 @@ export default [
   {
     name: 'Travel',
     description: 'We will accompany you in your travel as your personal photographer.',
-    longDescription: 'Vivamus gravida suscipit nulla, sit amet feugiat enim euismod non. Donec non sodales orci, ac euismod est. Duis molestie odio libero, ac tempus lacus porta in. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     link: '/services',
     img: travel,
     plans: travelPlans
@@ -73,7 +71,6 @@ export default [
   {
     name: 'Style',
     description: 'We do fashion, portaits and studio photoshoots.',
-    longDescription: 'Aenean tempor arcu in erat aliquam tempor. Nunc vitae tempus nibh. Cras porttitor rutrum venenatis. Fusce a velit malesuada, bibendum nulla quis, vehicula augue. Sed nec nulla sapien. Nullam pharetra ornare tincidunt. Pellentesque et massa nec nunc ullamcorper pellentesque a eu dui.',
     link: '/services',
     img: style,
     plans: stylePlans
