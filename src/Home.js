@@ -29,7 +29,7 @@ class Home extends Component {
           <img src={scroll} alt='scroll' onClick={(e) => this.handleScroll(e)}/>
         </header>
         <section className='home-services'>
-          <h2>What We Offer</h2>
+          <h1>What We Offer</h1>
           <Cards items={services} type='card' linkText='Learn more'/>
         </section>
       </Fragment>
