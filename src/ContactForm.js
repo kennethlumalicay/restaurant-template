@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './css/contactForm.css';
-import sgMail from './@sendgrid/mail';
 
 class ContactForm extends Component {
   constructor(props) {
@@ -39,8 +38,6 @@ class ContactForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    const key = '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';
-
     const { name, email, subject, message } = e.target;
 
     const composeSubj = 'LV - ' + subject.value;
@@ -48,15 +45,6 @@ class ContactForm extends Component {
       `email: ${email.value}\n` +
       `subject: ${subject.value}\n` +
       `\n${message.value}`;
-
-    sgMail.setApiKey(key);
-    const msg = {
-      to: 'nethoinkz@gmail.com',
-      from: 'noreply@lensvision.com',
-      subject: composeSubj,
-      text: composeMsg
-    };
-    sgMail.send(msg);
   }
 
   render() {
