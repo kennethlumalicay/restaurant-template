@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   justify-content: center;
   padding: 1rem 0;
+  width: 100%;
 }
 .card {
   display: flex;
@@ -49,9 +50,11 @@
 @media screen and (min-width: 768px) {
   .card-img {
     height: calc(33vw * 9/16);
+    max-height: calc(30rem * 9/16)
   }
   .card {
     width: calc(28% - 2rem);
     min-width: 288px;
+    max-width: 30rem;
   }
 }

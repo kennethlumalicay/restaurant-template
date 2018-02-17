@@ -1,3 +1,10 @@
+.services-content hr {
+  max-width: 1024px;
+  width: 70vw;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(233, 233, 233, 0), rgba(233, 233, 233, 1), rgba(233, 233, 233, 0));
+}
 .content-desc {
   text-align: center;
   display: flex;

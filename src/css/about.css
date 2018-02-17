@@ -13,7 +13,7 @@
   display: grid;
   grid: 1fr 1fr 1fr / 1fr;
   width: 100%;
-  max-width: 1024px;
+  max-width: 1280px;
   min-height: 80vh;
 }
 .about-pics > div > div {

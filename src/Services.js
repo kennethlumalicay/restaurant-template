@@ -17,6 +17,7 @@ class Services extends Component {
             <h1>Pick a plan that fit your needs.</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et lorem facilisis, bibendum sapien a, molestie orci.</p>
           </div>
+          <hr />
           <CardSections items={services}/>
         </section>
       </Fragment>
