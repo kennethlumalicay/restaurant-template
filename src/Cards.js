@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './css/cards.css';
 
 const SingleCard = props => (
-  <div className={`${props.type}`}>
+  <article className={`${props.type}`}>
     { props.img
       ? <div className={`${props.type}-img`} style={{backgroundImage: `url(${props.img})`}}></div>
       : null
@@ -14,15 +14,15 @@ const SingleCard = props => (
       ? <p className='price'>Price starts at ${props.price.toLocaleString()}.</p>
       : null }
     { props.link
-      ? <Link to={props.link}>{ props.price ? 'Get plan' : 'Learn more'}</Link>
+      ? <Link to={props.link}>{ props.linkText }</Link>
       : null
     }
-  </div>
+  </article>
 );
 
 const Cards = props => (
   <div className='cards-container'>
-    {props.items.map(e => <SingleCard key={e.name} {...e} type={props.type} />)}
+    {props.items.map(e => <SingleCard key={e.name} {...e} type={props.type} linkText={props.linkText}/>)}
   </div>
 );
 

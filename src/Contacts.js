@@ -10,8 +10,8 @@ class Contacts extends Component {
           <h1>We Don't Bite.</h1>
           <h4>Talk to us.</h4>
         </header>
-        <article className='test'>
-        </article>
+        <section className='test'>
+        </section>
       </Fragment>
     );
   }

@@ -28,10 +28,10 @@ class Home extends Component {
           <Link to='/services'>View Services</Link>
           <img src={scroll} alt='scroll' onClick={(e) => this.handleScroll(e)}/>
         </header>
-        <article className='home-services'>
+        <section className='home-services'>
           <h2>What We Offer</h2>
-          <Cards items={services} type='card'/>
-        </article>
+          <Cards items={services} type='card' linkText='Learn more'/>
+        </section>
       </Fragment>
     );
   }

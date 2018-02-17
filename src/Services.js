@@ -12,13 +12,13 @@ class Services extends Component {
           <h1>We Do Our Best.</h1>
           <h4>Harder. Better. Faster. Stronger.</h4>
         </header>
-        <article className='services-content'>
+        <section className='services-content'>
           <div className='content-desc'>
             <h1>Pick a plan that fit your needs.</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et lorem facilisis, bibendum sapien a, molestie orci.</p>
           </div>
           <CardSections items={services}/>
-        </article>
+        </section>
       </Fragment>
     );
   }

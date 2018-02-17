@@ -24,7 +24,7 @@ class Footer extends Component {
         </div>
         <div className='dev-info'>
           <span>Photos were taken from <a href='https://unsplash.com/' target='_blank' rel='noopener noreferrer'>Unsplash</a></span>
-          <span>Website and Logo made and designed by <a href='https://kennethlumalicay.github.io/' target='_blank' rel='noopener noreferrer'>Kenneth Malicay</a></span>
+          <span>Website and logo made and designed by <a href='https://kennethlumalicay.github.io/' target='_blank' rel='noopener noreferrer'>Kenneth Malicay</a></span>
         </div>
       </footer>
     );

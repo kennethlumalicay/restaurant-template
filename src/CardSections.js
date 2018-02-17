@@ -3,11 +3,11 @@ import './css/cardSections.css';
 import Cards from './Cards.js';
 
 const SingleSection = props => (
-  <div className='card-section'>
+  <section className='card-section'>
     <h1>{props.name}</h1>
     <p>{props.description}</p>
-    <Cards items={props.plans} type='card'/>
-  </div>
+    <Cards items={props.plans} type='card' linkText='Get Plan'/>
+  </section>
 );
 
 const CardSections = props => (
