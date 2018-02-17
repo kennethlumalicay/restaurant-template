@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './css/contactForm.css';
+//import mail from './mail.php';
 
 class ContactForm extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class ContactForm extends Component {
         return 5000;
       default:
         return 30;
-    };
+    }
   }
 
   handleChange(e) {
@@ -37,14 +38,12 @@ class ContactForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
-    const { name, email, subject, message } = e.target;
-
-    const composeSubj = 'LV - ' + subject.value;
-    const composeMsg = `name: ${name.value}\n` +
-      `email: ${email.value}\n` +
-      `subject: ${subject.value}\n` +
-      `\n${message.value}`;
+    this.setState({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
   }
 
   render() {
@@ -60,6 +59,7 @@ class ContactForm extends Component {
             onChange={e => this.handleChange(e)}
             value={name}
             required
+            size='1'
           />
         </label>
         <label>
@@ -71,6 +71,7 @@ class ContactForm extends Component {
             onChange={e => this.handleChange(e)}
             value={email}
             required
+            size='1'
           />
         </label>
         <label>
@@ -81,6 +82,7 @@ class ContactForm extends Component {
             placeholder='(optional)'
             onChange={e => this.handleChange(e)}
             value={subject}
+            size='1'
           />
         </label>
         <div>

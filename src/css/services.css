@@ -1,6 +1,3 @@
-.services-content {
-  padding: 0 2rem;
-}
 .content-desc {
   text-align: center;
   display: flex;
@@ -13,4 +10,12 @@
 }
 .content-desc p {
   margin: 0;
+}
+.content-desc h1, .content-desc p, .card-section > h1, .card-section > p {
+  padding: 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .content-desc h1, .content-desc p, .card-section > h1, .card-section > p {
+    padding: 0 2rem;
+  }
 }

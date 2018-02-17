@@ -6,7 +6,7 @@
   padding: 4rem 0;
 }
 .about-pics > h1, .about-pics > p {
-  padding: 0 2rem;
+  padding: 0 1rem;
   margin: 0 auto 2rem auto;
 }
 .about-pics > div {
@@ -24,6 +24,9 @@
 @media screen and (min-width: 768px) {
   .about-pics > div {
     grid: 1fr 1fr / 1fr 1fr;
+  }
+  .about-pics > h1, .about-pics > p {
+    padding: 0 2rem;
   }
   .about-pics > div > div:first-child {
     grid-area: 1 / 1 / 3 / 2;

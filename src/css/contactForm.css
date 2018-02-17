@@ -30,7 +30,7 @@
 }
 .contact-form > div textarea {
   width: 100%;
-  max-width: calc(450px-2rem);
+  max-width: calc(450px - 2rem);
   min-height: 6rem;
   margin-top: 1rem;
   line-height: 1.5rem;
@@ -41,4 +41,14 @@
   background: none;
   outline: none;
   padding: 5px 1rem;
+  cursor: pointer;
+}
+.contact-form > input[type='submit']:hover {
+  color: limegreen;
+  border-color: lime;
+}
+@media screen and (min-width: 768px) {
+  .contact-form {
+    width: 70%;
+  }
 }

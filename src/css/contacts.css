@@ -1,10 +1,25 @@
 .contact-us {
-  padding: 4rem 2rem;
+  padding: 4rem 1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  max-width: 768px;
+  margin: auto;
 }
 .contact-us > div h1, .contact-us > div p {
   margin: 0 auto 2rem auto;
+}
+@media screen and (min-width: 768px) {
+  .contact-us {
+    flex-flow: row-reverse;
+    padding: 4rem 2rem;
+    align-items: flex-start;
+  }
+  .contact-us > div {
+    text-align: left;
+    flex: 1;
+    margin-left: 1rem
+  }
 }
