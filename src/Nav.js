@@ -53,7 +53,7 @@ class Nav extends Component {
   handleBlur(e) {
     setTimeout(() => {
       this.setState({
-        hideNav: !this.state.hideNav
+        hideNav: true
       });
     },150);
   }
