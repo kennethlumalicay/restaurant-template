@@ -34,7 +34,7 @@ class Nav extends Component {
   handleScroll(e) {
     const { navBg, home } = this.state;
     const { scrollY, innerHeight } = window;
-    const height = home ? innerHeight-100 : innerHeight * 7/10 - 100;
+    const height = innerHeight * 7/10 - 100;
     if(navBg && scrollY < height) {
       this.setState({
         navBg: false
