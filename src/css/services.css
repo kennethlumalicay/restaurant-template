@@ -3,7 +3,7 @@
   width: 70vw;
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, rgba(155, 155, 155, 0), rgba(155, 155, 155, 1), rgba(155, 155, 155, 0));
+  background-image: linear-gradient(to right, rgba(211, 211, 211, 0), rgba(211, 211, 211, 1), rgba(211, 211, 211, 0));
 }
 .content-desc {
   text-align: center;

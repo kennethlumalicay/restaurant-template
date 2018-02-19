@@ -10,11 +10,12 @@ class Nav extends Component {
     this.state = {
       hideNav: true,
       navBg: false,
-      home: true
+      home: true,
+      pastLanding: false
     }
   }
   componentDidMount() {
-    document.addEventListener('scroll', (e) => this.handleScroll(e));
+    document.addEventListener('scroll', e => this.handleScroll(e));
     this.pageChange(this.props);
   }
   componentWillReceiveProps(next) {
@@ -32,30 +33,33 @@ class Nav extends Component {
     }
   }
   handleScroll(e) {
-    const { navBg, hideNav } = this.state;
+    const { pastLanding, hideNav } = this.state;
     const { scrollY, innerHeight } = window;
     const height = innerHeight * 7/10 - 100;
-    if(navBg && scrollY < height) {
+    if(scrollY < height && pastLanding) {
       this.setState({
-        navBg: !hideNav
+        navBg: !hideNav,
+        pastLanding: false
       });
-    } else if(!navBg && scrollY >= height) {
+    } else if(scrollY >= height && !pastLanding) {
       this.setState({
-        navBg: true
+        navBg: true,
+        pastLanding: true
       });
     }
   }
   toggleNav(e) {
+    const { navBg, pastLanding, hideNav } = this.state;
     this.setState({
-      hideNav: !this.state.hideNav,
-      navBg: this.state.hideNav
+      hideNav: !hideNav,
+      navBg: pastLanding ? true : !navBg
     });
   }
   handleBlur(e) {
     setTimeout(() => {
       this.setState({
         hideNav: true,
-        navBg: !this.state.navBg
+        navBg: this.state.pastLanding
       });
     },150);
   }

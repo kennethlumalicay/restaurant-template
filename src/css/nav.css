@@ -11,13 +11,14 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: solid 1px transparent;
+  font-weight: bold;
 }
 .nav, .navlinks {
   transition: background 0.25s ease-in-out;
 }
 .nav-bg {
   background-color: rgba(248,248,248,0.95);
-  border-bottom-color: #eee;
+  border-bottom-color: #ccc;
 }
 .nav a, .nav a:visited {
   color: #333;
@@ -31,7 +32,6 @@
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  font-weight: bold;
 }
 .logo {
   width: 3rem;
@@ -43,8 +43,8 @@
   outline: none;
   padding: 1rem 2rem;
 }
-.hide-nav {
-  display: none !important;
+.navlinks.hide-nav {
+  display: none;
 }
 .navlinks {
   display: flex;
@@ -53,6 +53,9 @@
   top: 5rem;
   right: 0;
   font-weight: bold;
+  border-left: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+  animation: fade-in 0.25s ease-in-out;
 }
 .navlinks a, .navlinks a:visited {
   padding: 1rem 2rem;
@@ -60,16 +63,20 @@
 .navlinks a:hover {
   box-shadow: 0 2px;
 }
-.active-nav:visited {
-  color: midnightblue !important;
+.navlinks a.active-nav:visited {
+  color: midnightblue;
+}
+
+@keyframes fade-in {
+  from {opacity: 0}
 }
 
 @media screen and (min-width: 768px) {
   .company a {
     font-size: 2rem;
   }
-  .hide-nav {
-    display: inherit !important;
+  .navlinks.hide-nav {
+    display: inherit;
   }
   .navbtn {
     display: none;
@@ -80,5 +87,6 @@
     right: auto;
     flex-direction: row;
     background-color: transparent;
+    border: none;
   }
 }

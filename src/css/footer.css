@@ -1,24 +1,50 @@
 .footer {
   margin-top: auto;
   padding: 2rem;
+  word-break: break-word;
   background-color: #111;
+}
+.footer > div {
   display: flex;
   flex-wrap: wrap;
-  word-break: break-word;
+  max-width: 64rem;
 }
-.footer, .footer a {
+.footer > div, .footer > div a {
   color: #999;
   text-decoration: none;
 }
-.footer > div {
+.footer > div > div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin: 1rem;
 }
+.get-app > img {
+  max-width: calc(12rem + 2px);
+  margin-top: 8px;
+  cursor: pointer;
+}
+.get-app > img:last-child {
+  max-width: 12rem;
+  border: 1px solid #a6a6a6;
+  border-radius: 5px;
+}
 .dev-info {
   width: 100%;
 }
-.dev-info a {
+.footer .dev-info a {
   color: #ccc;
+}
+@media screen and (min-width: 768px) {
+  .footer > div > div:not(.get-app) {
+    margin: 1rem 5rem 1rem 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer > div {
+    justify-content: space-between;
+  }
+  .footer > div > div {
+    margin: 1rem;
+  }
 }
