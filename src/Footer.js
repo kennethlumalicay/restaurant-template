@@ -24,6 +24,7 @@ class Footer extends Component {
           <div>
             <Link to='/'>ToS</Link>
             <Link to='/'>Privacy</Link>
+            <Link to='/'>Press</Link>
           </div>
           <div className='get-app'>
             <span>Get our app</span>
