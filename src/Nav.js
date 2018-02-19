@@ -32,12 +32,12 @@ class Nav extends Component {
     }
   }
   handleScroll(e) {
-    const { navBg, home } = this.state;
+    const { navBg, hideNav } = this.state;
     const { scrollY, innerHeight } = window;
     const height = innerHeight * 7/10 - 100;
     if(navBg && scrollY < height) {
       this.setState({
-        navBg: false
+        navBg: !hideNav
       });
     } else if(!navBg && scrollY >= height) {
       this.setState({
@@ -47,13 +47,15 @@ class Nav extends Component {
   }
   toggleNav(e) {
     this.setState({
-      hideNav: !this.state.hideNav
+      hideNav: !this.state.hideNav,
+      navBg: this.state.hideNav
     });
   }
   handleBlur(e) {
     setTimeout(() => {
       this.setState({
-        hideNav: true
+        hideNav: true,
+        navBg: !this.state.navBg
       });
     },150);
   }
