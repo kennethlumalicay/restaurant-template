@@ -4,6 +4,7 @@ import './css/home.css';
 import Cards from './Cards.js';
 import scroll from './img/scroll.png';
 import services from './servicesItems.js';
+import landing from './img/landing.jpg';
 
 class Home extends Component {
   handleScroll(e) {
@@ -22,7 +23,7 @@ class Home extends Component {
   render() {
     return (
       <Fragment>
-        <header className='landing'>
+        <header className='landing' style={{backgroundImage: `url(${landing})`}}>
           <h1>We Capture Memories.</h1>
           <h4>This is a template. None of this is real.</h4>
           <Link to='/services'>View Services</Link>

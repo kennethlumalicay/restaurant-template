@@ -1,6 +1,5 @@
 .landing {
   min-height: 100vh;
-  background-image: url('../img/landing.jpg');
   background-size: cover;
   background-position: bottom;
   display: flex;

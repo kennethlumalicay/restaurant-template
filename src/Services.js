@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import './css/services.css';
 import landing from './img/services-head.jpg';
-import CardSections from './CardSections.js';
+import { CardSections } from './CardSections.js';
 import services from './servicesItems.js';
 
 class Services extends Component {
