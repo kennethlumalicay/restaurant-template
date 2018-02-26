@@ -56,12 +56,13 @@
   border-left: solid 1px #ccc;
   border-bottom: solid 1px #ccc;
   animation: fade-in 0.25s ease-in-out;
+  padding: 0 2px;
 }
 .navlinks a, .navlinks a:visited {
   padding: 1rem 2rem;
 }
 .navlinks a:hover {
-  box-shadow: 0 2px;
+  box-shadow: -2px 0px;
 }
 .navlinks a.active-nav:visited {
   color: midnightblue;
@@ -88,5 +89,8 @@
     flex-direction: row;
     background-color: transparent;
     border: none;
+  }
+  .navlinks a:hover {
+    box-shadow: 0px 2px;
   }
 }
