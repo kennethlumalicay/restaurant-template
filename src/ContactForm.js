@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './css/contactForm.css';
 //import mail from './mail.php';
+const formspree = 'https://formspree.io/nethoinkz@gmail.com';
 
 class ContactForm extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class ContactForm extends Component {
       email: '',
       subject: '',
       message: '',
-      sending: false
+      sent: false
     }
   }
 
@@ -37,37 +38,45 @@ class ContactForm extends Component {
     });
   }
 
-  handleSubmit(e) {
-    // e.preventDefault();
-    // console.log('sending');
-    // this.setState({
-    //   sending: true
-    // })
-    // fetch('https://formspree.io/nethoinkz@gmail.com', {
-    //   method: 'POST',
-    //   body: e.target
-    // }).then(res => {
-    //   console.log('sent');
-    //   console.log(res);
-    //   this.setState({
-    //     name: '',
-    //     email: '',
-    //     subject: '',
-    //     message: '',
-    //     sending: false
-    //   });
-    // });
+  handleSubmit(event) {
+    event.preventDefault();
+    fetch(formspree, {
+      method: 'post',
+      headers: {
+        'Accept': 'application/json'
+      },
+      body: new FormData(event.target)
+    }).then(response => {
+      if(!response.ok) {
+        return Promise.reject();
+      }
+      this.setState({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+        sent: true
+      });
+      return Promise.resolve();
+    }).catch(error => {
+      return;
+    })
   }
 
   render() {
-    const { name, email, subject, message, sending } = this.state;
+    const { name, email, subject, message, sent } = this.state;
+    if(sent) {
+      return (
+        <div className='thankyou-form'>
+          <h1>Thank you!</h1>
+          <p>Aenean sodales orci quis sem varius iaculis. Duis sed quam ut ligula eleifend varius sit amet id justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+        </div>
+      );
+    }
     return (
       <form
         className='contact-form'
-        action='https://formspree.io/nethoinkz@gmail.com'
-        method='post'
-        // onSubmit={e => this.handleSubmit(e)}
-        disabled={sending}
+        onSubmit={e => this.handleSubmit(e)}
       >
         <label>
           <span>Name</span>
@@ -87,6 +96,7 @@ class ContactForm extends Component {
             type='email'
             name='email'
             placeholder='example@domain.com'
+            pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
             onChange={e => this.handleChange(e)}
             value={email}
             required
@@ -115,6 +125,8 @@ class ContactForm extends Component {
           />
           <sup>{message.length} characters</sup>
         </div>
+        <input type='hidden' name='_next' value='/contacts'/>
+        <input type='hidden' name='_subject' value={subject}/>
         <input type='submit' value='Send'/>
       </form>
     );
