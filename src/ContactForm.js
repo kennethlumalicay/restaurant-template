@@ -65,6 +65,7 @@ class ContactForm extends Component {
       <form
         className='contact-form'
         action='https://formspree.io/nethoinkz@gmail.com'
+        method='post'
         // onSubmit={e => this.handleSubmit(e)}
         disabled={sending}
       >
