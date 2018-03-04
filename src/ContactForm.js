@@ -39,16 +39,12 @@ class ContactForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const { name, email, subject, message } = this.state;
     this.setState({
       sending: true
     })
     fetch('https://formspree.io/nethoinkz@gmail.com', {
-      headers: {
-        'content-type': 'application/json'
-      },
       method: 'POST',
-      body: JSON.stringify({ name, email, subject, message })
+      body: e.target
     }).then(res => {
       this.setState({
         name: '',
@@ -61,9 +57,13 @@ class ContactForm extends Component {
   }
 
   render() {
-    const { name, email, subject, message } = this.state;
+    const { name, email, subject, message, sending } = this.state;
     return (
-      <form className='contact-form' onSubmit={e => this.handleSubmit(e)}>
+      <form
+        className='contact-form'
+        onSubmit={e => this.handleSubmit(e)}
+        disabled={sending}
+      >
         <label>
           <span>Name</span>
           <input
