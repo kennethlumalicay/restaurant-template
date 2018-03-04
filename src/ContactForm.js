@@ -9,7 +9,8 @@ class ContactForm extends Component {
       name: '',
       email: '',
       subject: '',
-      message: ''
+      message: '',
+      sending: false
     }
   }
 
@@ -38,11 +39,24 @@ class ContactForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    const { name, email, subject, message } = this.state;
     this.setState({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
+      sending: true
+    })
+    fetch('https://formspree.io/nethoinkz@gmail.com', {
+      headers: {
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify({ name, email, subject, message })
+    }).then(res => {
+      this.setState({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+        sending: false
+      });
     });
   }
 
