@@ -38,25 +38,25 @@ class ContactForm extends Component {
   }
 
   handleSubmit(e) {
-    e.preventDefault();
-    console.log('sending');
-    this.setState({
-      sending: true
-    })
-    fetch('https://formspree.io/nethoinkz@gmail.com', {
-      method: 'POST',
-      body: e.target
-    }).then(res => {
-      console.log('sent');
-      console.log(res);
-      this.setState({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-        sending: false
-      });
-    });
+    // e.preventDefault();
+    // console.log('sending');
+    // this.setState({
+    //   sending: true
+    // })
+    // fetch('https://formspree.io/nethoinkz@gmail.com', {
+    //   method: 'POST',
+    //   body: e.target
+    // }).then(res => {
+    //   console.log('sent');
+    //   console.log(res);
+    //   this.setState({
+    //     name: '',
+    //     email: '',
+    //     subject: '',
+    //     message: '',
+    //     sending: false
+    //   });
+    // });
   }
 
   render() {
@@ -64,7 +64,8 @@ class ContactForm extends Component {
     return (
       <form
         className='contact-form'
-        onSubmit={e => this.handleSubmit(e)}
+        action='https://formspree.io/nethoinkz@gmail.com'
+        // onSubmit={e => this.handleSubmit(e)}
         disabled={sending}
       >
         <label>
