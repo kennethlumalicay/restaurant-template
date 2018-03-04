@@ -39,6 +39,7 @@ class ContactForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log('sending');
     this.setState({
       sending: true
     })
@@ -46,6 +47,8 @@ class ContactForm extends Component {
       method: 'POST',
       body: e.target
     }).then(res => {
+      console.log('sent');
+      console.log(res);
       this.setState({
         name: '',
         email: '',
