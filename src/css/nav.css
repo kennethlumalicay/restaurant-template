@@ -12,6 +12,7 @@
   align-items: center;
   border-bottom: solid 1px transparent;
   font-weight: bold;
+  outline: none;
 }
 .nav, .navlinks {
   transition: background 0.25s ease-in-out;
