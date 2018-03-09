@@ -103,9 +103,9 @@ class ContactForm extends Component {
     return (
       <form
         className='contact-form'
-        action={formspree}
-        method='post'
-        // onSubmit={e => this.handleSubmit(e)}
+        // action={formspree}
+        // method='post'
+        onSubmit={e => this.handleSubmit(e)}
       >
         { isContacts
           ? null
