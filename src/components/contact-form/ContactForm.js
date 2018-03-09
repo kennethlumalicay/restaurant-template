@@ -57,10 +57,6 @@ class ContactForm extends Component {
     formData.append('_subject', `${messageType} - ${subject || 'No Subject'}`);
     formData.set('messageType', messageType);
 
-    for(const pair of formData.entries()) {
-      console.log(pair.toString());
-    }
-
     fetch(formspree, {
       method: 'post',
       headers: {
