@@ -30,7 +30,8 @@ export default function register() {
     }
 
     window.addEventListener('load', () => {
-      const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
+      const swUrl = `${process.env.PUBLIC_URL}/${process.env.REACT_APP_REPO}/service-worker.js`;
+      console.log('swUrl', swUrl);
 
       if (isLocalhost) {
         // This is running on localhost. Lets check if a service worker still exists or not.
@@ -53,7 +54,6 @@ export default function register() {
 }
 
 function registerValidSW(swUrl) {
-  console.log(swUrl, swUrl.replace('service-worker.js',''));
   navigator.serviceWorker
     .register(swUrl, {scope: swUrl.replace('service-worker.js','')})
     .then(registration => {
