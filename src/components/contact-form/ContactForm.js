@@ -23,8 +23,9 @@ class ContactForm extends Component {
       case 'email':
       case 'subject':
       case 'phone':
-      case 'address':
         return 30;
+      case 'address':
+        return 60;
       case 'message':
         return 5000;
       default:
