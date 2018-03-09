@@ -1,6 +1,6 @@
 {
-  "name": "company-template",
-  "homepage": "https://kennethlumalicay.github.io/company-template",
+  "name": "restaurant-template",
+  "homepage": "https://kennethlumalicay.github.io/restaurant-template",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

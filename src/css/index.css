@@ -1,14 +1,46 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple|Kalam');
+
+:root {
+
+  --xl-space: 4rem;
+  --m-space: 2rem;
+  --s-space: 1rem;
+  --xs-space: 5px;
+
+  --primary: hsla(0, 0%, 95%, 0.95);
+  --primary-light: hsla(0, 0%, 97%, 0.95);
+  --primary-dark: hsla(0, 0%, 85%, 0.95);
+  --text-primary-fade: hsla(0, 0%, 70%, 0.95);
+  --text-primary-pop: hsla(0, 0%, 0%, 0.95);
+
+  --secondary: hsl(165, 82%, 51%);
+  --secondary-light: hsl(165, 82%, 61%);
+  --secondary-dark: hsl(165, 82%, 41%);
+  --text-secondary-fade: hsl(165, 82%, 21%);
+
+  --text-dark: hsl(120, 2%, 18%);
+  --text-light: hsl(120, 2%, 38%);
+
+  --plain-bg: hsl(120, 2%, 92%);
+
+  --handwriting-font: 'Homemade Apple', cursive;
+  --plain-font: 'Kalam', cursive;
+}
+
 body {
   margin: 0;
   padding: 0;
   cursor: default;
-  color: #333;
-  background-color: #fafafa;
+  background-color: var(--plain-bg);
 }
 p {
   max-width: 1024px;
 }
-* {
-  font-family: 'Open Sans', sans-serif;
+body, a, button, input, textarea {
+  font-family: var(--plain-font);
+  color: var(--text-dark);
+}
+
+.handwritten {
+  font-family: var(--handwriting-font);
 }

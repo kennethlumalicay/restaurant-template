@@ -1,3 +1,3 @@
-# Lens Vision
-## Company Template
+# Bonfiacio's
+## Restaurant Template
 ### Made with create react app

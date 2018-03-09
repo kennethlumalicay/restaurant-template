@@ -1,0 +1,29 @@
+{
+  "items" : [
+    {
+      "link": "/",
+      "name": "Home",
+      "aClass": "nav-active"
+    },
+    {
+      "link": "/menu",
+      "name": "Menu",
+      "aClass": "nav-active"
+    },
+    {
+      "link": "/about",
+      "name": "About",
+      "aClass": "nav-active"
+    },
+    {
+      "link": "/order",
+      "name": "Order / Catering",
+      "aClass": "nav-active"
+    },
+    {
+      "link": "/contacts",
+      "name": "Contacts",
+      "aClass": "nav-active"
+    }
+  ]
+}
