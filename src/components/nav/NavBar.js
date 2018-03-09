@@ -21,7 +21,7 @@ class NavBar extends Component {
   handleScroll(e) {
     const { pastLanding } = this.state;
     const { scrollY, innerHeight } = window;
-    const height = 100;
+    const height = 1;
     if(scrollY < height && pastLanding) {
       this.setState({
         pastLanding: false
