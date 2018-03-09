@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import './contactForm.css';
 const formspree = 'https://formspree.io/nethoinkz@gmail.com';
 
@@ -13,7 +13,7 @@ class ContactForm extends Component {
       phone: '',
       address: '',
       sent: false,
-      type: props.isContacts ? 'feedback' : 'order'
+      messageType: props.isContacts ? 'feedback' : 'order'
     }
   }
 
@@ -44,28 +44,29 @@ class ContactForm extends Component {
 
   handleRadio(event) {
     this.setState({
-      type: event.target.value
+      messageType: event.target.value
     });
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    const { subject, type } = this.state;
+    const { subject, messageType } = this.state;
+    const { isContacts } = this.props;
     const formData = new FormData(event.target);
-    formData.append('_next', type === 'contacts' ? '/contacts' : '/order');
-    formData.append('_subject', `${type} - ${subject || 'No Subject'}`);
-    formData.append('type', type);
+    formData.append('_next', isContacts ? '/contacts' : '/order');
+    formData.append('_subject', `${messageType} - ${subject || 'No Subject'}`);
+    formData.set('messageType', messageType);
 
-    // for(const pair of formData.entries()) {
-    //   console.log(pair.toString());
-    // }
+    for(const pair of formData.entries()) {
+      console.log(pair.toString());
+    }
 
     fetch(formspree, {
       method: 'post',
       headers: {
         'Accept': 'application/json'
       },
-      body: new FormData(event.target)
+      body: formData
     }).then(response => {
       if(!response.ok) {
         return Promise.reject();
@@ -102,7 +103,9 @@ class ContactForm extends Component {
     return (
       <form
         className='contact-form'
-        onSubmit={e => this.handleSubmit(e)}
+        action={formspree}
+        method='post'
+        // onSubmit={e => this.handleSubmit(e)}
       >
         { isContacts
           ? null
@@ -112,7 +115,7 @@ class ContactForm extends Component {
               <span>Order</span>
               <input
                 type='radio'
-                name='type'
+                name='messageType'
                 value='order'
                 defaultChecked
               />
@@ -121,7 +124,7 @@ class ContactForm extends Component {
               <span>Catering</span>
               <input
                 type='radio'
-                name='type'
+                name='messageType'
                 value='catering'
               />
             </label>
