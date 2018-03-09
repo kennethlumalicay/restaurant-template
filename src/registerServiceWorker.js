@@ -53,8 +53,9 @@ export default function register() {
 }
 
 function registerValidSW(swUrl) {
+  console.log(swUrl, swUrl.replace('service-worker.js',''));
   navigator.serviceWorker
-    .register(swUrl, {scope: './'})
+    .register(swUrl, {scope: swUrl.replace('service-worker.js','')})
     .then(registration => {
       registration.onupdatefound = () => {
         const installingWorker = registration.installing;
