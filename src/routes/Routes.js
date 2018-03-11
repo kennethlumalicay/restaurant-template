@@ -27,21 +27,55 @@ class Routes extends Component {
 }
 
 class ToTop extends Component {
+  constructor(props) {
+    super(props);
+    this.animate = null;
+    this.state = {
+      scroll: window.scrollY
+    };
+
+    this.onScroll = this.onScroll.bind(this);
+    this.mobileTouch = this.mobileTouch.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.onScroll);
+  }
+
   componentWillReceiveProps(next) {
+    const scope = this;
     if(this.props.match.params.page !== next.match.params.page) {
-      var animate = setInterval(function() {
-        if(window.scrollY < 1) {
-          clearInterval(animate);
+      this.animate = setInterval(function() {
+        console.log(window.scrollY, scope.state.scroll);
+        if(window.scrollY < 1 || window.scrollY-1 > scope.state.scroll) {
+          clearInterval(scope.animate);
+          window.removeEventListener('touchstart', scope.mobileTouch);
+          window.addEventListener('scroll', scope.onScroll);
           return;
         }
-        window.scroll(0,window.scrollY-window.scrollY/32);
+        const val = ~~(window.scrollY-window.scrollY/16);
+        window.scroll(0,val);
+        scope.setState({
+          scroll: val
+        });
       });
-      window.addEventListener('touchstart', function mobileTouch(e) {
-        clearInterval(animate);
-        window.removeEventListener('touchstart', mobileTouch);
-      });
+      window.removeEventListener('scroll', this.onScroll);
+      window.addEventListener('touchstart', this.mobileTouch);
     }
   }
+
+  onScroll() {
+    this.setState({
+      scroll: window.scrollY
+    });
+  }
+
+  mobileTouch(e) {
+    clearInterval(this.animate);
+    window.removeEventListener('touchstart', this.mobileTouch);
+    window.removeEventListener('scroll', this.onScroll);
+  }
+
   render() {
     return null;
   }

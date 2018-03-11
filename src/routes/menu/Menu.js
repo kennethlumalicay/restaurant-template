@@ -11,7 +11,7 @@ class Menu extends Component {
           <h1>Menu</h1>
           <h4>Get a taste of home.</h4>
         </header>
-        <section className='home-services'>
+        <section className='menu-section'>
           <h1>What We Offer</h1>
         </section>
       </Fragment>

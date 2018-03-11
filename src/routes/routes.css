@@ -16,6 +16,9 @@
 .landing-sub h4 {
   margin: 0 auto auto auto;
 }
+.landing-sub + section {
+  padding: 4rem 1rem;
+}
 .test {
   height: 100vh;
 }
@@ -23,5 +26,10 @@
   animation: slide-down 0.35s ease-in-out;
 }
 @keyframes slide-down {
-  from {margin-top: -7px; opacity: 0.4};
+  from {margin-top: -8px; opacity: 0.6;};
+}
+@media screen and (min-width: 768px) {
+  .landing-sub + section {
+    padding: 4rem 2rem;
+  }
 }
