@@ -1,69 +1,78 @@
-.landing {
-  min-height: 100vh;
-  background-size: cover;
-  background-position: bottom;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #333;
-  text-align: center;
-  padding: 2rem;
-  box-sizing: border-box;
-}
-.landing h1 {
-  font-size: 3rem;
-  margin: auto auto 0 auto;
-  margin-top: calc(50vh - 7rem);
-}
-.landing h4 {
-  margin: 0 auto;
-}
-.landing a {
-  margin: 5rem auto auto auto;
-  text-decoration: none;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 1.5rem / 50%;
-  background-color: #333;
-}
-.landing a:hover {
-  background-color: #555;
-}
-.landing img {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  margin: 0 auto 2rem auto;
-  width: 1.5rem;
-  opacity: 0.6;
-  cursor: pointer;
-}
-.landing img:hover {
-  opacity: 0.8;
-}
 .home-section {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: var(--xl-space) 0;
+  display: grid;
+  grid: auto / 1fr;
+  grid-auto-rows: auto;
+  padding: var(--s-space);
+  grid-gap: var(--s-space);
+  align-items: flex-start;
 }
-.home-section h1, .home-section p {
-  margin-top: 0;
+.food-teaser {
+  display: grid;
+  grid: auto / repeat(2, 1fr);
+  grid-auto-rows: auto;
+  grid-auto-flow: condensed;
 }
-.home-section > div {
-  white-space: nowrap;
-  padding: var(--m-space);
-  flex: 1;
+.food-teaser img {
+  max-width: 100%;
+}
+.home-hours-loc {
+  display: grid;
+  grid: auto / auto 1fr;
+  grid-auto-rows: auto;
+  grid-gap: var(--s-space);
+}
+.home-hours-loc > div > :first-child {
+  margin: 0;
+  line-height: 3rem;
+}
+.home-hours-loc p {
+  margin-bottom: 0;
 }
 .store-hours > div {
   display: flex;
   justify-content: space-between;
 }
-.store-hours > div > p:first-child {
-  margin-right: var(--s-space);
+.gmap-container {
+  grid-column: 1 / 3;
+  min-height: 16rem;
+  height: 100%;
+  width: 100%;
 }
+
 @media screen and (min-width: 768px) {
-  .home-section > div {
-    max-width: 320px;
+  .food-teaser {
+    grid: auto / repeat(4, 1fr);
+  }
+  .food-teaser img:first-child {
+    grid-area: 1 / 1 / 4 / 4;
+  }
+  .food-teaser img:nth-child(5) {
+    grid-area: 4 / 2 / 8 / 5;
+  }
+  .home-section {
+    padding: var(--m-space);
+    grid-gap: var(--m-space);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .home-section {
+    grid: auto / 3fr 2fr;
+    padding: var(--m-space);
+    grid-gap: var(--m-space);
+  }
+  .home-hours-loc {
+    background-color: var(--primary-light);
+    padding-top: var(--s-space);
+  }
+  .home-hours-loc > i {
+    padding-left: var(--s-space);
+  }
+  .home-hours-loc > div {
+    padding-right: var(--s-space);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .home-section {
+    grid: auto / 2fr 1fr;
   }
 }

@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import './about.css';
-import landing from '../../img/about-head.jpg';
+import landing from '../../img/landing.jpg';
 
 class About extends Component {
   render() {

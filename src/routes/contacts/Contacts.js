@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import './contacts.css';
-import landing from '../../img/contacts-head.jpg';
+import landing from '../../img/landing.jpg';
 import ContactForm from '../../components/contact-form/ContactForm.js';
 
 class Contacts extends Component {

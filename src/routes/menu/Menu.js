@@ -9,7 +9,7 @@ class Menu extends Component {
       <Fragment>
         <header className='landing-sub' style={{backgroundImage: `url(${landing})`}}>
           <h1>Menu</h1>
-          <h4>Taste of home.</h4>
+          <h4>Get a taste of home.</h4>
         </header>
         <section className='home-services'>
           <h1>What We Offer</h1>

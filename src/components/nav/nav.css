@@ -128,7 +128,7 @@ a.nav-active {
 
 /** BURGER **/
 #burger {
-  padding: 1rem;
+  padding: 0.5rem;
   position: fixed;
   top: 1rem;
   right: 1rem;
