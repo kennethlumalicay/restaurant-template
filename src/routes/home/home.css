@@ -1,15 +1,12 @@
 .home-section {
   display: grid;
-  grid: auto / 1fr;
-  grid-auto-rows: auto;
+  grid: auto-flow dense / 1fr;
   grid-gap: var(--s-space);
   align-items: flex-start;
 }
 .food-teaser {
   display: grid;
-  grid: auto / repeat(2, 1fr);
-  grid-auto-rows: auto;
-  grid-auto-flow: condensed;
+  grid: auto-flow dense / repeat(2, 1fr);
 }
 .food-teaser a {
   display: flex;
@@ -17,6 +14,7 @@
   overflow: hidden;
 }
 .food-teaser img {
+  transform: scale(1.01);
   max-width: 100%;
   transition: transform 0.25s ease-in-out;
 }
@@ -25,8 +23,7 @@
 }
 .home-hours-loc {
   display: grid;
-  grid: auto / auto 1fr;
-  grid-auto-rows: auto;
+  grid: auto-flow dense / auto 1fr;
   grid-gap: var(--s-space);
 }
 .home-hours-loc > div > :first-child {
@@ -49,7 +46,7 @@
 
 @media screen and (min-width: 768px) {
   .food-teaser {
-    grid: auto / repeat(4, 1fr);
+    grid: auto-flow dense / repeat(4, 1fr);
   }
   .food-teaser a:first-child {
     grid-area: 1 / 1 / 4 / 4;
@@ -64,7 +61,7 @@
 }
 @media screen and (min-width: 1024px) {
   .home-section {
-    grid: auto / auto 22rem;
+    grid: auto-flow dense / auto 22rem;
     grid-gap: var(--m-space);
   }
   .home-hours-loc {
