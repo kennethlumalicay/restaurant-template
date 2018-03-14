@@ -46,7 +46,6 @@ class ToTop extends Component {
     const scope = this;
     if(this.props.match.params.page !== next.match.params.page) {
       this.animate = setInterval(function() {
-        console.log(window.scrollY, scope.state.scroll);
         if(window.scrollY < 1 || window.scrollY-1 > scope.state.scroll) {
           clearInterval(scope.animate);
           window.removeEventListener('touchstart', scope.mobileTouch);
@@ -73,7 +72,7 @@ class ToTop extends Component {
   mobileTouch(e) {
     clearInterval(this.animate);
     window.removeEventListener('touchstart', this.mobileTouch);
-    window.removeEventListener('scroll', this.onScroll);
+    window.addEventListener('scroll', this.onScroll);
   }
 
   render() {
