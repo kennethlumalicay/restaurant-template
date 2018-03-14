@@ -1,0 +1,20 @@
+.menu-section {
+  display: grid;
+  grid: auto-flow dense / 1fr;
+}
+.menu-items-container {
+  display: grid;
+  grid: auto-flow dense / 1fr;
+  grid-gap: var(--m-space);
+}
+
+@media screen and (min-width: 768px) {
+  .menu-items-container {
+    grid: auto-flow dense / 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .menu-items-container {
+    grid: auto-flow dense / 1fr 1fr 1fr;
+  }
+}

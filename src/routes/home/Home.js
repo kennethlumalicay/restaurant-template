@@ -43,8 +43,8 @@ class Home extends Component {
             <i className='far fa-compass fa-3x'/>
             <div>
               <h1>Store Location</h1>
-              <p>Epifanio de los Santos Ave, Ortigas Center</p>
-              <p>Mandaluyong, Metro Manila</p>  
+              <p>Central Park, New York</p>
+              <p>New York</p>  
             </div>
             <div className='gmap-container'>
               <Gmap />

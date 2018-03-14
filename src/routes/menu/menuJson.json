@@ -1,0 +1,54 @@
+{
+  "items": [
+    {
+      "name": "Chicken Inasal",
+      "description": "Roast chicken marinated in a mixture of lime, pepper, vinegar and annato, then grilled over hot coals while basted with the marinade.",
+      "price": "10"
+    },
+    {
+      "name": "Sisig",
+      "description": "A dish made from parts of pig head and liver, usually seasoned with calamansi and chili peppers.",
+      "price": "10"
+    },
+    {
+      "name": "Pork Belly Sinigang",
+      "description": "A stew characterized by its sour and savoury taste most often associated with tamarind.",
+      "price": "16"
+    },
+    {
+      "name": "Beef Kaldereta",
+      "description": "The meat is stewed with potatoes, carrots, tomato sauce and liver paste.",
+      "price": "16"
+    },
+    {
+      "name": "Kare-kare",
+      "description": "A traditional oxtail stew complimented with a thick savory peanut sauce.",
+      "price": "16"
+    },
+    {
+      "name": "Adobo",
+      "description": "Chicken marinated in vinegar, soy sauce, garlic, and black peppercorns, which is browned in oil, and simmered in the marinade.",
+      "price": "12"
+    },
+    {
+      "name": "Dinuguan",
+      "description": "A savory stew of pork offal and/or meat simmered in a rich, spicy dark gravy of pig blood, garlic, chili, and vinegar.",
+      "price": "12"
+    },
+    {
+      "name": "Isaw",
+      "description": "Isaw is a street food from the Philippines, made from barbecued pig or chicken intestines.",
+      "price": "6"
+    },
+    {
+      "name": "Lumpiang Shanghai",
+      "description": "A dish made-up of ground pork or beef, minced onion, carrots, and spices with the mixture held together by beaten egg.",
+      "price": "6"
+    },
+    {
+      "name": "Pork Barbecue",
+      "description": "Composed of thinly sliced pork pieces that are marinated in a special mixture of seasonings and spices.",
+      "price": "6"
+    }
+  ]
+}

@@ -20,7 +20,7 @@ class NavBar extends Component {
 
   handleScroll(e) {
     const { pastLanding } = this.state;
-    const { scrollY, innerHeight } = window;
+    const { scrollY } = window;
     const height = 1;
     if(scrollY < height && pastLanding) {
       this.setState({
@@ -44,7 +44,7 @@ class NavBar extends Component {
   }
   
   render() {
-    const { expand, navBg, pastLanding } = this.state;
+    const { expand, pastLanding } = this.state;
     const navBarClasses = (expand ? ' expand' : '') + (pastLanding ? ' navBg' : '');
 
     return (

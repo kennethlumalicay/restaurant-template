@@ -18,6 +18,7 @@
 }
 .landing-sub + section {
   padding: 4rem 1rem;
+  grid-gap: var(--s-space);
 }
 .test {
   height: 100vh;
@@ -30,6 +31,7 @@
 }
 @media screen and (min-width: 768px) {
   .landing-sub + section {
-    padding: 4rem 2rem;
+    padding: var(--xl-space);
+    grid-gap: var(--xl-space);
   }
 }
