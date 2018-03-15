@@ -1,50 +1,40 @@
 .footer {
   margin-top: auto;
-  padding: 2rem;
+  padding: var(--m-space) var(--s-space);
   word-break: break-word;
   background-color: #111;
 }
 .footer > div {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  max-width: 64rem;
+  max-width: 80rem;
+  margin: auto;
 }
 .footer > div, .footer > div a {
   color: #999;
   text-decoration: none;
 }
-.footer > div > div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 1rem;
+.footer > div > div:not(:last-child) {
+  margin: 0 0 var(--s-space) 0;
 }
-.get-app > img {
-  max-width: calc(12rem + 2px);
-  margin-top: 8px;
-  cursor: pointer;
+.footer > div p {
+  margin: 0;
 }
-.get-app > img:last-child {
-  max-width: 12rem;
-  border: 1px solid #a6a6a6;
-  border-radius: 5px;
-}
-.dev-info {
+.footer .dev-info {
   width: 100%;
 }
 .footer .dev-info a {
   color: #ccc;
 }
 @media screen and (min-width: 768px) {
-  .footer > div > div:not(.get-app) {
-    margin: 1rem 5rem 1rem 1rem;
+  .footer {
+    padding: var(--m-space);
   }
-}
-@media screen and (min-width: 1024px) {
   .footer > div {
-    justify-content: space-between;
+    flex-direction: row;
   }
-  .footer > div > div {
-    margin: 1rem;
+  .footer > div > div:not(:last-child) {
+    margin: 0 var(--xl-space) var(--m-space) 0;
   }
 }

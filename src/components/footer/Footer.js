@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './footer.css';
-import ios from '../../img/app-ios.svg';
-import google from '../../img/app-google.svg';
 
 class Footer extends Component {
   render() {
@@ -10,30 +8,22 @@ class Footer extends Component {
       <footer className='footer'>
         <div>
           <div className='company-info'>
-            <span>Lens Vision</span>
-            <span>77X Charizard St. Arbok New York, 7X777</span>
-            <Link to='/contacts'>lens@vision7X.com</Link>
-            <Link to='/contacts'>(777)777-777X</Link>
+            <p>Bonifacio's</p>
+            <p>Traditional Filipino Restaurant</p>
+            <p><a href='https://www.google.com/maps/place/?q=Central+Park+New+York+NY&zoom=13' target='_blank' rel='noopener noreferrer'>Central Park, New York, NY</a></p>
+            <p><a href='mailto:example@bonifacio.com' target='_blank' rel='noopener noreferrer'>example@bonifacio.com</a></p>
+            <p><a href='tel: 123-456-7890' target='_blank' rel='noopener noreferrer'>(123) 456 - 7890</a></p>
           </div>
-          <div>
-            <Link to='/about'>Team</Link>
-            <Link to='/contacts'>Careers</Link>
-            <Link to='/contacts'>Help</Link>
-            <Link to='/contacts'>Contact</Link>
-          </div>
-          <div>
-            <Link to='/'>ToS</Link>
-            <Link to='/'>Privacy</Link>
-            <Link to='/'>Press</Link>
-          </div>
-          <div className='get-app'>
-            <span>Get our app</span>
-            <img src={ios} alt='ios'/>
-            <img src={google} alt='google'/>
+          <div className='footer-navlinks'>
+            <p><Link to='/home'>Home</Link></p>
+            <p><Link to='/menu'>Menu</Link></p>
+            <p><Link to='/about'>About</Link></p>
+            <p><Link to='/order'>Order / Catering</Link></p>
+            <p><Link to='/contacts'>Contact</Link></p>
           </div>
           <div className='dev-info'>
-            <span>Photos were taken from <a href='https://unsplash.com/' target='_blank' rel='noopener noreferrer'>Unsplash</a></span>
-            <span>Website and logo made and designed by <a href='https://kennethlumalicay.github.io/' target='_blank' rel='noopener noreferrer'>Kenneth Malicay</a></span>
+            <p>Photos were taken from <a href='https://unsplash.com/' target='_blank' rel='noopener noreferrer'>Unsplash</a>, <a href='https://www.pexels.com/' target='_blank' rel='noopener noreferrer'>Pexels</a> and <a href='https://pixabay.com/' target='_blank' rel='noopener noreferrer'>Pixabay</a>.</p>
+            <p>Website made and designed by <a href='https://kennethlumalicay.github.io/' target='_blank' rel='noopener noreferrer'>Kenneth Malicay</a></p>
           </div>
         </div>
       </footer>
