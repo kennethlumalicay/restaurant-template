@@ -29,12 +29,12 @@
 }
 @media screen and (min-width: 768px) {
   .footer {
-    padding: var(--m-space);
+    padding: var(--xl-space);
   }
   .footer > div {
     flex-direction: row;
   }
-  .footer > div > div:not(:last-child) {
-    margin: 0 var(--xl-space) var(--m-space) 0;
+  .footer > div > div:first-child {
+    margin: 0 calc(var(--xl-space) * 2) var(--m-space) 0;
   }
 }
