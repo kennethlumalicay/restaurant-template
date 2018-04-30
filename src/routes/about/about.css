@@ -5,7 +5,7 @@
 .about-section img {
   max-width: 100%;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .about-section {
     grid: auto-flow dense / 1fr 2fr;
   }
