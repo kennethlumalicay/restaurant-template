@@ -1,6 +1,8 @@
 .about-section {
   display: grid;
   grid: auto-flow dense / 1fr;
+  margin: auto;
+  max-width: 1200px;
 }
 .about-section img {
   max-width: 100%;
